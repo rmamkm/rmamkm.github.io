@@ -1,0 +1,19 @@
+/* body styling */
+body {
+  padding-top: 55px;
+}
+/* navbar-brand styling */
+.navbar-brand {
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+  font-size: 2em;
+}
+.thumbnail {
+  margin-top: 25px;
+}
+.panel {
+  margin-top: 25px;
+}
+footer {
+  margin-top: 3em;
+}
