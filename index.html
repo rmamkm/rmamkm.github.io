@@ -112,6 +112,7 @@
 				<div class="thumbnail">
     	<div class="caption">
      	<img src="images/US_Flag.png" class="img-responsive" alt="US Flag of 1863">
+	     <caption><small>The 34 Star Flag of the United States (1861-1863)</small></caption>
 	     <h2>Union</h2>
 	     <p>The United States Army included over 2 million soldiers. The Union was led by men who made significant contributions both during and well after the war.</p>
 	     <p><a href="leadership.html#union" class="btn btn-info btn-block">Explore Union Leadership</a></p>
@@ -121,7 +122,8 @@
    <div class="col-lg-6">
 				<div class="thumbnail">
     	<div class="caption">
-     	<img src="images/CSA_Flag.png" class="img-responsive" alt="Confederate States of America Flag of 1861">
+     	<img src="images/CSA_Flag.png" class="img-responsive" id="csa_flag" alt="Confederate States of America Flag of 1861">
+     	 <caption><small><span class="flag">The First National Flag of the CSA (1861)</span></small></caption>	
 	     <h2>Confederate</h2>
 	     <p>The Confederate States Army, while half the size of the Union Army, was well led by many experienced men known for their battlefield brilliance.</p>
 	     <p><a href="leadership.html#csa" class="btn btn-info btn-block">Explore CSA Leadership</a></p>
@@ -153,17 +155,79 @@
 		</section>
 	</div><!-- end row 3 -->
   
- <!-- row 4 -->
+   <!-- row 4 -->
  <footer class="row">
- 	<p class="text-center">Rafael Mendez | Assignment 1</p>
+ 	<p class="text-center">Rafael Mendez | Assignment 2</p>
+ 	<p class="text-center"><a data-toggle="modal" data-target="#emailSignup">Email Newsletter <span class="glyphicon glyphicon-envelope"></span></a></p>
  	<p class="text-center"><small>Harvard Extension DGMD E-20</small></p>
  </footer><!--end row 4 -->
 
 </div><!-- end container -->
+
+<!-- modal -->
+<div class="modal fade" id="emailSignup" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
+								<h2>Email Newsletter Signup</h2>
+						</div>
+						<div class="modal-body">
+							<img src="images/franklin.jpg" class="img-responsive" alt="Battle of Franklin" id="franklin">	
+							<form role="form">
+								<div class="form-group">
+									<label for="name" class="control-label">Name:</label>
+									<input type="text" class="form-control" id="name" placeholder="Enter name">									
+								</div>
+								<div class="form-group email-group">
+									<label for="email">Email*:</label>
+									<input type="email" class="form-control" id="email" placeholder="Enter email">
+									<span class="help-block"></span>									
+								</div>
+								
+								<label>Select Newsletter(s) To Receive:</label>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="this_day"> This Day in the Civil War
+      			</label>
+      			</div>
+      			<div class="checkbox">
+      			<label>
+										<input type="checkbox" value="tech"> Civil War Tech
+      			</label>
+      			</div>
+      			<div class="checkbox">
+      			<label>
+										<input type="checkbox" value="med"> Civil War Medicine
+      			</label>	
+      		</div>
+
+      		<div class="form-group battle-group">
+									<label for="newsletter" class="control-label">Chose the battle you are most interested in:</label>
+      				<select id="battle_interest" class="form-control">
+		      			<option checked>Please select one:</option>
+		      			<option value="sumter">Fort Sumter</option>
+		      			<option value="antietam">Antietam</option>
+		       		<option value="gettysburg">Gettysburg</option>
+		      			<option value="chickamauga">Chickamauga</option>     			
+	      		</select>
+	      		<span class="help-block"></span>
+      		</div>
+								<button type="submit" class="btn btn-block btn-danger">Sign-up</button>
+							</form>
+						</div><!--end modal body -->
+      <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div><!--end modal footer -->
+    </div><!-- end content -->
+  </div><!-- end dialog -->
+</div><!-- end modal -->
+
 	
 <!-- js for bootstrap -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jsmaster.js"></script>
 	<script>
  	$('.carousel').carousel();
  </script>
