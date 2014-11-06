@@ -42,6 +42,40 @@ $(document).ready(function(){
 		} //end if/else
 	}); //end click
 	
+	//click effect for union_flag on index.html
+	$('#union_flag').click(function(){
+		if($('#union_flag').attr('src') == 'images/US_Flag.png' ) {
+			$('#union_flag').attr({
+				src:'images/Fort_Sumter_Flag.png'
+			}); // end attr
+			$('.unionflag').text('United States Flag flown at Fort Sumter (1861)');
+		} else if($('#union_flag').attr('src') == 'images/Fort_Sumter_Flag.png' ) {
+			$('#union_flag').attr({
+				src:'images/US_Naval_Jack.png'
+			}); // end attr
+			$('.unionflag').text('"US Naval Jack 35 stars". Licensed under Creative Commons Attribution');	
+		} else {
+			$('#union_flag').attr({
+				src:'images/US_Flag.png'
+			}); // end attr
+			$('.unionflag').text('The 34 Star Flag of the United States (1861-1863)');	
+		} //end if/else
+	});//end click
+
+	//hover effect for union_flag on index.html
+	$('#union_flag').hover(function(){
+		$('#union_flag').css({
+			opacity: '0.75',
+			border: '1px dotted grey'
+		}); //end css
+	}, function(){
+		$('#union_flag').css({
+			opacity: '1.0',
+			border: ''
+		}); //end css
+	}); //end hover
+
+
 	//click effect for csa_flag on index.html
 	$('#csa_flag').click(function(){
 		if($('#csa_flag').attr('src') == 'images/CSA_Flag.png' ) {
@@ -71,7 +105,7 @@ $(document).ready(function(){
 	}, function(){
 		$('#csa_flag').css({
 			opacity: '1.0',
-			border: ''
+			border: 'none'
 		}); //end css
 	}); //end hover
 
@@ -83,6 +117,7 @@ $(document).ready(function(){
 		$('tr:contains("Confederate Victory")').css({
 			color: '#777' 
 		}).hide(); //end filtered CSS for Confederate Victory
+		$('tr:contains("Inconclusive")').hide();
 	}); //end click
 
 	$('#csa_vic').click(function(){
@@ -92,6 +127,29 @@ $(document).ready(function(){
 		$('tr:contains("Union Victory")').css({
 			color: '#777' 
 		}).hide(); //end filtered CSS for Union Victory
+		$('tr:contains("Inconclusive")').hide();
 	}); //end click
+
+	$('#all_battles').click(function(){
+		$('tr:contains("Confederate Victory")').css({
+			color: '#777' 
+		}).show(); //end filtered CSS for Confederate Victory
+		$('tr:contains("Union Victory")').css({
+			color: '#777' 
+		}).show(); //end filtered CSS for Union Victory
+		$('tr:contains("Inconclusive")').show();
+	}); //end click
+
+	//additional effects
+	//table row hover to supplement bootstrap js
+	$('tr').hover(function(){
+		$(this).css({
+			fontWeight: '600'
+		}); //end css for hover on
+	}, function(){
+		$(this).css({
+			fontWeight: 'normal'
+		}); //end css for hover on
+	}); //end hover
 
 }); //end ready
