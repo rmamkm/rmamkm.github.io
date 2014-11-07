@@ -177,15 +177,76 @@
 
  <!-- row 6 -->
  <footer class="row">
- 	<p class="text-center">Rafael Mendez | Assignment 1</p>
- 	<p class="text-center"><small>Harvard Extension DGMD E-20</small></p>
+ 	<p class="text-center">Rafael Mendez | Assignment 2</p>
+ 	<p class="text-center"><a data-toggle="modal" data-target="#emailSignup">Email Newsletter <span class="glyphicon glyphicon-envelope"></span></a></p>
+ 	<p class="text-center"><small><span id="e20">Harvard Extension DGMD E-20</span></small></p>
  </footer><!-- end row 6-->
 
 </div><!-- end container -->
 
+<!-- modal for email sign-up -->
+<div class="modal fade" id="emailSignup" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close glyphicon glyphicon-remove" data-dismiss="modal"></button>
+								<h2>Email Newsletter Signup</h2>
+						</div>
+						<div class="modal-body">
+							<img src="images/franklin.jpg" class="img-responsive" alt="Battle of Franklin" id="franklin">	
+							<form role="form">
+								<div class="form-group">
+									<label for="name" class="control-label">Name:</label>
+									<input type="text" class="form-control" id="name" placeholder="Enter name">									
+								</div>
+								<div class="form-group email-group">
+									<label for="email">Email*:</label>
+									<input type="email" class="form-control" id="email" placeholder="Enter email">
+									<span class="help-block"></span>									
+								</div>
+								
+								<label>Select Newsletter(s) To Receive:</label>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="this_day"> This Day in the Civil War
+      			</label>
+      			</div>
+      			<div class="checkbox">
+      			<label>
+										<input type="checkbox" value="tech"> Civil War Tech
+      			</label>
+      			</div>
+      			<div class="checkbox">
+      			<label>
+										<input type="checkbox" value="med"> Civil War Medicine
+      			</label>	
+      		</div>
+
+      		<div class="form-group battle-group">
+									<label for="newsletter" class="control-label">Chose the battle you are most interested in:</label>
+      				<select id="battle_interest" class="form-control">
+		      			<option checked>Please select one:</option>
+		      			<option value="sumter">Fort Sumter</option>
+		      			<option value="antietam">Antietam</option>
+		       		<option value="gettysburg">Gettysburg</option>
+		      			<option value="chickamauga">Chickamauga</option>     			
+	      		</select>
+	      		<span class="help-block"></span>
+      		</div>
+								<button type="submit" class="btn btn-block btn-danger">Sign-up</button>
+							</form>
+						</div><!--end modal body -->
+      <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div><!--end modal footer -->
+    </div><!-- end content -->
+  </div><!-- end dialog -->
+</div><!-- end modal -->
+
 <!-- js for bootstrap -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+		<script src="js/jsmaster.js"></script>
 	<!-- js for linking directly to the right leadership tab content -->
 	<script>
 		$(document).ready(function() {

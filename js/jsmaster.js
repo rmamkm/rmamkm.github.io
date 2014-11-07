@@ -109,7 +109,7 @@ $(document).ready(function(){
 		}); //end css
 	}); //end hover
 
-	//effect that requires filtering
+	//effects that require filtering
 	$('#union_vic').click(function(){
 		$('tr:contains("Union Victory")').css({
 			color: '#000076' 
@@ -140,16 +140,28 @@ $(document).ready(function(){
 		$('tr:contains("Inconclusive")').show();
 	}); //end click
 
-	//additional effects
 	//table row hover to supplement bootstrap js
 	$('tr').hover(function(){
 		$(this).css({
+			fontSize: '1.1em',
 			fontWeight: '600'
 		}); //end css for hover on
 	}, function(){
 		$(this).css({
+			fontSize: '1em',
 			fontWeight: 'normal'
 		}); //end css for hover on
+	}); //end hover
+
+	//DGMD E-20 footer hover
+	$('#e20').hover(function(){
+		$(this).css({
+			fontWeight: '600'
+		}).text('DGMD E-20: Understanding and Developing Interactive Media'); //end css for hover on
+	}, function(){
+		$(this).css({
+			fontWeight: 'normal'
+		}).text('Harvard Extension DGMD E-20'); //end css for hover on
 	}); //end hover
 
 }); //end ready
